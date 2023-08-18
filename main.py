@@ -81,9 +81,9 @@ def is_today_in_db():
     return count > 0
 
 def generate_chart_if_needed():
-    if not os.path.exists('flights_per_day.png') or is_today_in_db()==0:
-        dates, counts = fetch_flight_counts()
-        plot_and_save_chart(dates, counts)
+    # if not os.path.exists('flights_per_day.png') or is_today_in_db()==0:
+    dates, counts = fetch_flight_counts()
+    plot_and_save_chart(dates, counts)
 
 def id_in_db(id):
     conn = sqlite3.connect('flights.db')
