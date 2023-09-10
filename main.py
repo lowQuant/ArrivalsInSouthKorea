@@ -58,7 +58,7 @@ def plot_and_save_chart(dates, counts):
     
     if len(dates) > 10:
         # Use a line chart if more than 10 dates
-        plt.plot(dates[1:], counts, marker='o', color='skyblue', linestyle='-')
+        plt.plot(dates[1:], counts[1:], marker='o', color='skyblue', linestyle='-')
     else:
         # Use a bar chart otherwise
         plt.bar(dates, counts, color='skyblue')
